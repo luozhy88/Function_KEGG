@@ -29,3 +29,18 @@ gconvert_id=gconvert(query = c("GO:0005030", "rs17396340", "NLRP1"), organism = 
 gconvert_id_2=gorth(query = c("Klf4", "Sox2", "71950"), source_organism = "mmusculus", 
       target_organism = "hsapiens", mthreshold = Inf, filter_na = TRUE,
       numeric_ns = "ENTREZGENE_ACC")  
+      
+## Reduce redundancy of human GO terms
+library(rutils)  
+pathway_df=data.frame(
+  go_type=rep("BP",5),
+  go_id=c("GO:0003700","GO:0005524","GO:0005886","GO:0009401","GO:0016021")
+)  
+
+result=go_reduce(
+  pathway_df = pathway_df,
+  orgdb = "org.Hs.eg.db",
+  threshold = 0.6,
+  # scores = NULL,
+  measure = "Wang"
+)  
