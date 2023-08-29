@@ -9,6 +9,7 @@ pathview(gene.data = gens, pathway.id = k, species = "hsa", gene.idtype="symbol"
 
 
 ## gprofiler2
+https://biit.cs.ut.ee/gprofiler/gost
 ### KO enrichment
 library(gprofiler2)  
 gostres <- gost(query = c("GO:0003700", "GO:0005524", "GO:0005886", "GO:0009401", "GO:0016021"), 
