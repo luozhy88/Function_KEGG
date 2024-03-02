@@ -43,3 +43,4 @@ result=go_reduce(
 
 ## mulea
 https://github.com/ELTEbioinformatics/mulea  
+https://github.com/SysMednet/Gscore  
