@@ -40,3 +40,6 @@ pathway_df=data.frame(
 result=go_reduce(
   pathway_df = pathway_df,
   orgdb = "org.Hs.eg.db",threshold = 0.6,measure = "Wang")  
+
+## mulea
+https://github.com/ELTEbioinformatics/mulea  
